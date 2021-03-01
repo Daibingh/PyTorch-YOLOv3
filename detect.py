@@ -103,7 +103,6 @@ if __name__ == "__main__":
 
         # Create plot
         img = np.array(Image.open(path))
-        plt.figure()
         fig, ax = plt.subplots(1)
         ax.imshow(img)
 
@@ -143,4 +142,7 @@ if __name__ == "__main__":
         filename = os.path.basename(path).split(".")[0]
         output_path = os.path.join("output", f"{filename}.png")
         plt.savefig(output_path, bbox_inches="tight", pad_inches=0.0)
-        plt.close()
+        # plt.close()
+
+    plt.show()
+
